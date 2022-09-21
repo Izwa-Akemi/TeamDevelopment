@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8"/>
+<title>Session サンプル</title>
+</head>
+<body>
+ <p th:text="${loginSession.userName != null ? 'ようこそ' + loginSession.userName + 'さん' : '未ログインです'}" />
+ <p th:if="${loginSession.password != null}">
+ パスワード入力済です。
+ </p>
+</body>
+</html>

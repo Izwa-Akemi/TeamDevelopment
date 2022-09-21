@@ -14,6 +14,6 @@ public class TestController {
 	@GetMapping("/")
 	public String hello(Model model) {
 		model.addAttribute("loginSession", loginSession);
-		return "test.html";
+		return "session/test.html";
 	}
 }

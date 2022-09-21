@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import template.team.Sesstion.form.LoginForm;
 
 @Controller
 public class IndexController {
@@ -33,13 +32,13 @@ public class IndexController {
 
 	@GetMapping("/")
 	public String getIndex() {
-		return "index.html";
+		return "session/index.html";
 	}
 
 	@PostMapping("/hello")
 	public String confirm(@RequestParam String userName,@RequestParam String password, Model model) {
 		loginSession.setUserName(userName);
 		loginSession.setPassword(password);
-		return "hello.html";
+		return "session/hello.html";
 	}
 }
